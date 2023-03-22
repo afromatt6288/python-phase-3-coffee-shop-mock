@@ -134,16 +134,19 @@ build out any helper methods if needed.
 
 ### Bonus: For any invalid inputs raise an `Exception`.
 
-Uncomment the following lines in the test files:
+Adjust the following lines in the test files:
 
 #### customer_tests.py
 
-- lines 37 - 45
+- uncomment lines 37 - 45
+- comment out lines 21-35
 
 #### coffee_tests.py
 
-- lines 26 - 30
+- uncomment lines 26 - 30
+- comment out lines 20 - 24
 
 #### order_tests.py
 
-- lines 20 - 30
+- uncomment lines 20 - 30
+- change lines 26, 28 and 30 from order.rating to order.price

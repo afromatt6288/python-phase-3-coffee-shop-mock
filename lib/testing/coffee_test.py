@@ -17,17 +17,18 @@ class TestCoffee:
         coffee = Coffee("Mocha")
         assert (isinstance(coffee.name, str))
 
-    def test_name_setter(self):
-        '''Cannot change the name of the coffee'''
-        coffee = Coffee("Mocha")
-        coffee.name = "Peppermint Mocha"
-        assert (coffee.name == "Mocha")
+    # def test_name_setter(self):
+    #     '''Cannot change the name of the coffee'''
+    #     coffee = Coffee("Mocha")
+    #     coffee.name = "Peppermint Mocha"
+    #     assert (coffee.name == "Mocha")
 
-    # def test_raise_exception_for_changing_name(self):
-    #     '''raise exception for trying to change name after initialization'''
-    #     coffee = Coffee("Peppermint Mocha")
-    #     with pytest.raises(Exception):
-    #         coffee.name = 'Banana'
+    def test_raise_exception_for_changing_name(self):
+        '''raise exception for trying to change name after initialization'''
+        coffee = Coffee("Peppermint Mocha")
+        with pytest.raises(Exception):
+            coffee.name = 'Banana'
+            # coffee.set_name('Banana')
 
     def test_has_many_orders(self):
         '''coffee has many orders.'''

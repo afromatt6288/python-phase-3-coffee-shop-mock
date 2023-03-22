@@ -18,31 +18,31 @@ class TestCustomer:
         customer.name = "Stove"
         assert (customer.name == "Stove")
 
-    def test_customer_name_is_str(self):
-        '''customer name is a string'''
-        customer = Customer('Steve')
-        assert (isinstance(customer.name, str))
-        customer.name = 1
-        assert (isinstance(customer.name, str))
-
-    def test_customer_name_length(self):
-        '''customer name is between 1 and 15 characters'''
-        customer = Customer('Steve')
-        assert (len(customer.name) == 5)
-        customer.name = "NameLongerThan15Characters"
-        assert (len(customer.name) == 5)
-        customer.name = ""
-        assert (len(customer.name) == 5)
-
-    # def test_raise_exception_for_non_string_name(self):
-    #     '''raise exception when trying to change name to non str'''
+    # def test_customer_name_is_str(self):
+    #     '''customer name is a string'''
     #     customer = Customer('Steve')
-    #     with pytest.raises(Exception):
-    #         customer.name = True
-    #     with pytest.raises(Exception):
-    #         customer.name = "a"*26
-    #     with pytest.raises(Exception):
-    #         customer.name = ""
+    #     assert (isinstance(customer.name, str))
+    #     customer.name = 1
+    #     assert (isinstance(customer.name, str))
+
+    # def test_customer_name_length(self):
+    #     '''customer name is between 1 and 15 characters'''
+    #     customer = Customer('Steve')
+    #     assert (len(customer.name) == 5)
+    #     customer.name = "NameLongerThan15Characters"
+    #     assert (len(customer.name) == 5)
+    #     customer.name = ""
+    #     assert (len(customer.name) == 5)
+
+    def test_raise_exception_for_non_string_name(self):
+        '''raise exception when trying to change name to non str'''
+        customer = Customer('Steve')
+        with pytest.raises(Exception):
+            customer.name = True
+        with pytest.raises(Exception):
+            customer.name = "a"*26
+        with pytest.raises(Exception):
+            customer.name = ""
 
     def test_has_many_orders(self):
         '''customer has many orders'''
